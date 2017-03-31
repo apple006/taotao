@@ -1,6 +1,7 @@
 package com.taotao.serviceimpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.taotao.dao.UserMapper;
@@ -12,17 +13,8 @@ import com.taotao.service.UserServiceI;
  */
 @Service("userService")
 public class UserServiceImpl implements UserServiceI {
-
-	private UserMapper userMapper;
-
-	public UserMapper getUserMapper() {
-		return userMapper;
-	}
-
 	@Autowired
-	public void setUserMapper(UserMapper userMapper) {
-		this.userMapper = userMapper;
-	}
+	private UserMapper userMapper;
 
 	public User getUserById(Long id) {
 		return userMapper.selectByPrimaryKey(id);
