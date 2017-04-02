@@ -26,9 +26,9 @@
 		</property>
 	</bean>
   ```
-  ------
-  其中需要加入的依赖是：
-  <br>
+
+-  其中需要加入的依赖是：
+
   ```xml
   <dependency>
 			<groupId>commons-fileupload</groupId>
