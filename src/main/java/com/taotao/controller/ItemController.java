@@ -6,13 +6,10 @@ package com.taotao.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.taotao.dao.ItemMapper;
+import com.taotao.model.EasyUIDataGridResult;
 import com.taotao.model.Item;
-import com.taotao.pojo.EasyUIDataGridResult;
 import com.taotao.service.ItemServiceI;
 
 /**
@@ -30,10 +27,10 @@ public class ItemController {
 		return item;
 	}
 
-	/*@RequestMapping("/item/list")
+	@RequestMapping("/item/list")
 	@ResponseBody
-	public EasyUIDataGridResult getItemList(Integer page, Integer rows) {
+	public EasyUIDataGridResult getItemList(int page, int rows) {
 		EasyUIDataGridResult result = itemServiceI.getItemList(page, rows);
 		return result;
-	}*/
+	}
 }

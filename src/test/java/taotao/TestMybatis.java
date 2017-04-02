@@ -18,6 +18,7 @@ import com.taotao.service.UserServiceI;
 public class TestMybatis {
 	private ApplicationContext ac;
 	private UserServiceI userService;
+
 	private ItemServiceI itemService;
 
 	@Before

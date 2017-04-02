@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.taotao.pojo;
+package com.taotao.model;
 
 import java.util.List;
 
 /**
- * @author HuangQinJian 下午3:35:49 2017年4月2日
+ * @author HuangQinJian 下午6:34:28 2017年4月2日
  */
 public class EasyUIDataGridResult {
 	private long total;
