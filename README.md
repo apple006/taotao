@@ -26,8 +26,9 @@
 		</property>
 	</bean>
   ```
-
+  ------
   其中需要加入的依赖是：
+  <br>
   ```xml
   <dependency>
 			<groupId>commons-fileupload</groupId>
@@ -77,7 +78,7 @@
 			<version>1.9.13</version>
 		</dependency>
   ```
-**还有需要注意的是版本有变化，应将配置文件中的**
+**<font color=red>还有需要注意的是版本有变化，应将配置文件中的**
 
 ```xml
 org.springframework.http.converter.json.MappingJacksonHttpMessageConverter
@@ -95,7 +96,7 @@ class="org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 
 错误：No mapping found for HTTP request with URI [/taotao/userController/showUser.do] in DispatcherServlet
 
-**错误原因：没有在SpringMVC的配置文件中添加<mvc:annotation-driven />**
+**<font color=red>错误原因：没有在SpringMVC的配置文件中添加<mvc:annotation-driven />**
 
 ```xml
 <!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
@@ -109,12 +110,12 @@ class="org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 
 在这个过程中我也了解到了关于POJO对象的一些知识：
 
-[springmvc学习笔记（7）——传递对象作为参数（POJO）](http://blog.csdn.net/u010837612/article/details/45199919)
+- [springmvc学习笔记（7）——传递对象作为参数（POJO）](http://blog.csdn.net/u010837612/article/details/45199919)
 
-[POJO式开发](http://blog.csdn.net/gaoqian19820731/article/details/6256544)
+- [POJO式开发](http://blog.csdn.net/gaoqian19820731/article/details/6256544)
 
-同时在这过程中使用了PageHelper插件进行分页操作！
+<font color=red>同时在这过程中使用了PageHelper插件进行分页操作！
 
-[Mybatis-PageHelper](https://github.com/pagehelper/Mybatis-PageHelper)
+- [Mybatis-PageHelper](https://github.com/pagehelper/Mybatis-PageHelper)
 
-[【MyBatis】MyBatis分页插件PageHelper的使用](http://blog.csdn.net/eson_15/article/details/52270046)
+- [【MyBatis】MyBatis分页插件PageHelper的使用](http://blog.csdn.net/eson_15/article/details/52270046)
