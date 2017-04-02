@@ -40,6 +40,9 @@
 			<version>2.4</version>
 </dependency>
   ```
+
+  ------
+
   ```xml
   <bean id="mappingJacksonHttpMessageConverter"
 		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -83,3 +86,35 @@ org.springframework.http.converter.json.MappingJacksonHttpMessageConverter
 ```xml
 class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"
 ```
+
+-------
+
+#### 3.初步实现列表的显示（分页的使用）（4月2日）
+
+在这过程中出现了一个错误，让我郁闷了一会，感觉这是一个非常容易忘记的点，希望自己以后能够注意！
+
+错误：No mapping found for HTTP request with URI [/taotao/userController/showUser.do] in DispatcherServlet
+
+**错误原因：没有在SpringMVC的配置文件中添加<mvc:annotation-driven />**
+
+```xml
+<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
+	<context:component-scan base-package="com.taotao.controller" />
+	<mvc:annotation-driven />
+```
+具体原因可以参考博客
+- [使用@Controller注解为什么要配置<mvc:annotation-driven />](http://blog.csdn.net/jbgtwang/article/details/7359592)
+
+- [mvc:annotation-driven>与context:annotation-config](http://www.cnblogs.com/dreamroute/p/4493346.html)
+
+在这个过程中我也了解到了关于POJO对象的一些知识：
+
+[springmvc学习笔记（7）——传递对象作为参数（POJO）](http://blog.csdn.net/u010837612/article/details/45199919)
+
+[POJO式开发](http://blog.csdn.net/gaoqian19820731/article/details/6256544)
+
+同时在这过程中使用了PageHelper插件进行分页操作！
+
+[Mybatis-PageHelper](https://github.com/pagehelper/Mybatis-PageHelper)
+
+[【MyBatis】MyBatis分页插件PageHelper的使用](http://blog.csdn.net/eson_15/article/details/52270046)
